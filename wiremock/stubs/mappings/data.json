@@ -1,0 +1,62 @@
+{
+   "request":{
+      "method":"GET",
+      "url":"user"
+   },
+   "response":{
+      "gender":"female",
+      "name":{
+         "title":"Mademoiselle",
+         "first":"Bettina",
+         "last":"David"
+      },
+      "location":{
+         "street":{
+            "number":7245,
+            "name":"Rue Victor-Hugo"
+         },
+         "city":"Therwil",
+         "state":"Graubünden",
+         "country":"Switzerland",
+         "postcode":5495,
+         "coordinates":{
+            "latitude":"-48.0762",
+            "longitude":"155.0158"
+         },
+         "timezone":{
+            "offset":"+5:30",
+            "description":"Bombay, Calcutta, Madras, New Delhi"
+         }
+      },
+      "email":"bettina.david@example.com",
+      "login":{
+         "uuid":"220bbfd5-e3f3-4963-ba6d-9870f675e937",
+         "username":"ticklishlion556",
+         "password":"gymnast",
+         "salt":"m0mIBpCN",
+         "md5":"c108626188fc2758fb889ac8a1451985",
+         "sha1":"87b3d949fd41abfc4d1671bc2e6e50a60073ce27",
+         "sha256":"1e1d7ddf6ba24fbd16140cfa6bd390cb4c330ec523a9244a4a73f217c3b0dd1e"
+      },
+      "dob":{
+         "date":"1971-09-08T06:54:56.062Z",
+         "age":49
+      },
+      "registered":{
+         "date":"2002-12-11T00:00:19.889Z",
+         "age":18
+      },
+      "phone":"076 852 47 38",
+      "cell":"078 941 29 22",
+      "id":{
+         "name":"AVS",
+         "value":"756.2077.6039.87"
+      },
+      "picture":{
+         "large":"https://randomuser.me/api/portraits/women/94.jpg",
+         "medium":"https://randomuser.me/api/portraits/med/women/94.jpg",
+         "thumbnail":"https://randomuser.me/api/portraits/thumb/women/94.jpg"
+      },
+      "nat":"CH"
+   }
+}
