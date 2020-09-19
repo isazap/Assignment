@@ -1,6 +1,6 @@
 version: '3'
 
-service:
+services:
   wiremock:
     image: user-mock-local
     build: .
