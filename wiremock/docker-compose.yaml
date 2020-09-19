@@ -1,0 +1,10 @@
+version: '3'
+
+service:
+  wiremock:
+    image: user-mock-local
+    build: .
+    ports:
+      - "8080"
+    volumes:
+      - ./wiremock/stubs:home/wiremock
