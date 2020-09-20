@@ -15,6 +15,7 @@ public enum Gender {
 
     /**
      * Creates an instance of gender from a String.
+     *
      * @param gender as a String
      * @return the corresponding gender
      * @throws IllegalArgumentException if the gender label is invalid

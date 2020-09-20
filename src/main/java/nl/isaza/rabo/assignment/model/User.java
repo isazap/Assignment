@@ -2,7 +2,6 @@ package nl.isaza.rabo.assignment.model;
 
 import lombok.Getter;
 import lombok.Setter;
-import org.springframework.lang.Nullable;
 
 @Getter
 @Setter
@@ -10,7 +9,6 @@ public class User {
     private Name name;
     private Gender gender;
     private DateOfBirth dob;
-    @Nullable
     private String picture;
 
     public User(Name name, Gender gender, DateOfBirth dob, String picture) {

@@ -9,19 +9,19 @@ import java.util.Date;
 public class UserDto {
 
     @JsonCreator
-    public UserDto (
+    public UserDto(
             String first,
             String surname,
             Gender gender,
             Date dob,
-            String picture ) {
+            String picture) {
     }
 
     public UserDto(User user) {
         this(user.getName().getFirst(),
-        user.getName().getSurname(),
-        user.getGender(),
-        user.getDob().getDate(),
-        user.getPicture());
+                user.getName().getSurname(),
+                user.getGender(),
+                user.getDob().getDate(),
+                user.getPicture());
     }
 }
