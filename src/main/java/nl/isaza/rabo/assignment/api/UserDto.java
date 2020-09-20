@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import nl.isaza.rabo.assignment.model.Gender;
 import nl.isaza.rabo.assignment.model.User;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class UserDto {
 
@@ -13,7 +13,7 @@ public class UserDto {
             String first,
             String surname,
             Gender gender,
-            Date dob,
+            LocalDate dob,
             String picture) {
     }
 

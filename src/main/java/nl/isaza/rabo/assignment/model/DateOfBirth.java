@@ -3,15 +3,15 @@ package nl.isaza.rabo.assignment.model;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 @Setter
 public class DateOfBirth {
-    private Date date;
+    private LocalDate date;
     private Integer age;
 
-    public DateOfBirth(Date date, Integer age) {
+    public DateOfBirth(LocalDate date, Integer age) {
         this.date = date;
         this.age = age;
     }
