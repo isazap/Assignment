@@ -5,7 +5,7 @@ import nl.isaza.rabo.assignment.model.Gender;
 import org.apache.commons.validator.routines.UrlValidator;
 import org.springframework.stereotype.Service;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 @Service
 public class UserService {
@@ -47,7 +47,7 @@ public class UserService {
                 first,
                 surname,
                 Gender.FEMALE,
-                Date.valueOf("05-03-1980"),
+                LocalDate.of(1980, 2, 13),
                 picture);
     }
 
