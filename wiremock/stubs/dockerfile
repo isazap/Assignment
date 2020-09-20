@@ -9,7 +9,7 @@ RUN mkdir -p /var/wiremock/lib/ \
 
 WORKDIR /wiremock
 
-# local volume so we can change stubs dynamically without building a new container
+# local volume so we can change stubs without rebuilding image
 VOLUME /wiremock
 
 EXPOSE 8080
