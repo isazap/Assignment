@@ -4,15 +4,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import nl.isaza.rabo.assignment.model.Gender;
 import nl.isaza.rabo.assignment.model.User;
 
-import java.net.URL;
 import java.util.Date;
 
 public class UserDto {
-    private String first;
-    private String surname;
-    private Gender gender;
-    private Date dob;
-    private URL picture;
 
     @JsonCreator
     public UserDto (
@@ -20,12 +14,7 @@ public class UserDto {
             String surname,
             Gender gender,
             Date dob,
-            URL picture ) {
-        this.first = first;
-        this.surname = surname;
-        this.gender = gender;
-        this.dob = dob;
-        this.picture = picture;
+            String picture ) {
     }
 
     public UserDto(User user) {
