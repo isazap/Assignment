@@ -1,4 +1,4 @@
-package test.isaza.rabo.assignment.model;
+package nl.isaza.rabo.model;
 
 import java.util.Date;
 
