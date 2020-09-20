@@ -7,7 +7,10 @@ RUN mkdir -p /var/wiremock/lib/ \
     && wget https://repo1.maven.org/maven2/com/github/tomakehurst/wiremock-jre8-standalone/$WIREMOCK_VERSION/wiremock-jre8-standalone-$WIREMOCK_VERSION.jar \
     -O /var/wiremock/lib/wiremock-jre8-standalone.jar
 
-WORKDIR /home/wiremock
+WORKDIR /wiremock
+
+# local volume so we can change stubs dynamically without building a new container
+VOLUME /wiremock
 
 EXPOSE 8080
 
