@@ -1,7 +1,15 @@
 {
    "request":{
       "method":"GET",
-      "url":"/users?first=Bettina"
+      "urlPath": "/users",
+      "queryParameters": {
+         "first": {
+            "matches": "$^|[Bb][Ee][Tt][Tt][Ii][Nn][Aa]"
+         },
+         "surname": {
+            "matches": "$^|[Da][Aa][Vv][Ii][Dd][Ss][Oo][Nn]"
+         }
+      }
    },
    "response": {
       "status": 200,

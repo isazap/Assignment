@@ -1,7 +1,15 @@
 {
    "request":{
       "method":"GET",
-      "url":"/users?first=Hugo"
+      "urlPath": "/users",
+      "queryParameters": {
+         "first": {
+            "matches": "$^|[Hh][Uu][Gg][Oo]"
+         },
+         "surname": {
+            "matches": "$^|[Ll][Uu][Cc][Aa][Ss]"
+         }
+      }
    },
    "response": {
       "status": 200,
