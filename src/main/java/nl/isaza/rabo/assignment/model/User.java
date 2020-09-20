@@ -1,49 +1,22 @@
 package nl.isaza.rabo.assignment.model;
 
-import java.net.URL;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.lang.Nullable;
 
+@Getter
+@Setter
 public class User {
     private Name name;
     private Gender gender;
     private DateOfBirth dob;
-    private URL picture;
+    @Nullable
+    private String picture;
 
-    public User(Name name, Gender gender, DateOfBirth dob, URL picture) {
+    public User(Name name, Gender gender, DateOfBirth dob, String picture) {
         this.name = name;
         this.gender = gender;
         this.dob = dob;
-        this.picture = picture;
-    }
-
-    public Name getName() {
-        return name;
-    }
-
-    public void setName(Name name) {
-        this.name = name;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
-
-    public DateOfBirth getDob() {
-        return dob;
-    }
-
-    public void setDob(DateOfBirth dob) {
-        this.dob = dob;
-    }
-
-    public URL getPicture() {
-        return picture;
-    }
-
-    public void setPicture(URL picture) {
         this.picture = picture;
     }
 }
