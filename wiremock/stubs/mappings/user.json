@@ -5,7 +5,7 @@
    },
    "response": {
       "status": 200,
-      "body": "Hello world!",
+      "jsonBody": {"status":"Error","message":"Endpoint not found"},
       "headers": {
          "Content-Type": "application/json"
       }
