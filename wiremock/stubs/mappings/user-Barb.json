@@ -1,0 +1,78 @@
+{
+   "request":{
+      "method":"GET",
+      "urlPath":"/users",
+      "queryParameters":{
+         "first":{
+            "matches":"$^|[Bb][Aa][Rr][Bb]"
+         },
+         "surname":{
+            "matches":"$^|[Hh][Ee][Nn][Dd][Ee][Rr][Ss][Oo][Nn]"
+         }
+      }
+   },
+   "response":{
+      "status":200,
+      "jsonBody":{
+         "user":{
+            "gender":"female",
+            "name":{
+               "title":"Ms",
+               "first":"Barb",
+               "last":"Henderson"
+            },
+            "location":{
+               "street":{
+                  "number":8501,
+                  "name":"New Street"
+               },
+               "city":"Sunderland",
+               "state":"West Glamorgan",
+               "country":"United Kingdom",
+               "postcode":"J01 0UH",
+               "coordinates":{
+                  "latitude":"5.5019",
+                  "longitude":"123.3881"
+               },
+               "timezone":{
+                  "offset":"+4:30",
+                  "description":"Kabul"
+               }
+            },
+            "email":"barb.henderson@example.com",
+            "login":{
+               "uuid":"26cad7de-1218-4d32-b890-0615a133cf2c",
+               "username":"angrybear470",
+               "password":"minime",
+               "salt":"igF2nkDI",
+               "md5":"0945a820eaa42a36c5fa5879a36b3984",
+               "sha1":"b53352d9b00271b314c112afb26ea8f3a51ea3e9",
+               "sha256":"e46594f6c5a0f08aa660c28588ab3acbaeff60c3f29f3dc91bfb6f3d85f3a134"
+            },
+            "dob":{
+               "date":"1949-08-18T10:16:05.243Z",
+               "age":71
+            },
+            "registered":{
+               "date":"2008-09-30T23:48:37.733Z",
+               "age":12
+            },
+            "phone":"01022 89172",
+            "cell":"0783-482-799",
+            "id":{
+               "name":"NINO",
+               "value":"OY 23 98 97 W"
+            },
+            "picture":{
+               "large":"https://randomuser.me/api/portraits/women/65.jpg",
+               "medium":"https://randomuser.me/api/portraits/med/women/65.jpg",
+               "thumbnail":"https://randomuser.me/api/portraits/thumb/women/65.jpg"
+            },
+            "nat":"GB"
+         }
+      },
+      "headers":{
+         "Content-Type":"application/json"
+      }
+   }
+}
