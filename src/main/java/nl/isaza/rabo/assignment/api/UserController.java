@@ -1,19 +1,20 @@
 package nl.isaza.rabo.assignment.api;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import nl.isaza.rabo.assignment.model.User;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/users")
 public class UserController {
-    @Autowired
-    UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping
-    public UserDto getUser(@PathVariable String first, @PathVariable String surname) {
-        return userService.findUser(first, surname);
+    public UserDto getUser(@RequestParam String first, @RequestParam String surname) {
+        User user = userService.findUser(first, surname);
+        return new UserDto(user);
     }
 }
