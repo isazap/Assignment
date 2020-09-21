@@ -33,7 +33,7 @@ To be able to start all aspects of this project you need:
 == Resource
 
  - The application runs on http://localhost:8080
- - The WireMock runs on http://localhost:8000.
+ - The WireMock (Docker container) can be accessed on http://localhost:8000.
    To test it is running: `curl "http://localhost:8000/users?first=Hugo&surname=Lucas"`
 
 == Project Status
@@ -43,22 +43,24 @@ This project is incomplete.
 
  - Docker service configuration with Wiremock standalone service to service user data.
    Searchable by first and/or surname.
- - Spring Application: preliminary User model, User Dto, and REST controller, UserService class frame.
+ - Spring Application: preliminary User model,
+   User Dto, and REST controller, UserService class (function signatures), UserControllerTest.
  - Readme documentation.
 
 #TODO#
 
- - Client to pull json data from external service
- - Map json data to model (perhaps using ObjectMapper)
+ - Client to pull json data from external service (if in reality the user data could come from
+   other sources in future then I would probably follow some sort of Factory pattern).
+ - Map json data to model (most likely using the Jackson ObjectMapper)
  - Wire it to UserService class
  - Unit tests for service and controller methods etc. covering all reasonable edge cases
  - Error mappings for api
- - Determine where nulls are allowed, and how to handle
+ - Determine if nulls are allowed, and how to handle
  - Swagger docs for application api
  - Check code coverage etc. in some tool like SonarCloud
  - Check Javadoc comments in classes are sufficient
  - Implement front end to search and display user data
- - Front end tests for functionality
+ - Front end tests for functionality.
 
 
 
