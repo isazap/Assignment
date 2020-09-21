@@ -17,6 +17,10 @@
     <properties>
         <java.version>11</java.version>
         <commons-valiidator.version>1.6</commons-valiidator.version>
+        <junit-jupiter-api.version>5.7.0</junit-jupiter-api.version>
+        <asccidoctorj.version>2.4.1</asccidoctorj.version>
+        <asciidoctorj-pdf.version>1.5.3</asciidoctorj-pdf.version>
+        <maven-surefire-plugin.version>2.22.2</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
@@ -47,10 +51,9 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-api</artifactId>
-			<version>5.7.0</version>
+			<version>${junit-jupiter-api.version}</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
             <groupId>io.projectreactor</groupId>
             <artifactId>reactor-test</artifactId>
@@ -61,7 +64,16 @@
             <artifactId>commons-validator</artifactId>
             <version>${commons-valiidator.version}</version>
         </dependency>
-
+        <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>${asccidoctorj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj-pdf</artifactId>
+            <version>${asciidoctorj-pdf.version}</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -72,7 +84,7 @@
             </plugin>
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.22.2</version>
+                <version>${maven-surefire-plugin.version}</version>
             </plugin>
         </plugins>
     </build>
