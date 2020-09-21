@@ -28,7 +28,7 @@ To be able to start all aspects of this project you need:
  2. Run `docker build -t user-mock:local ./wiremock/stubs/`
  3. Run `docker-compose up -d` to start required dependencies.
  4. Run `mvn compile` to build project.
- 5. Run `nl.isaza.rabo.assignment.AssignmentApplication` to spin up the application.
+ 5. Run `nl.isaza.rabo.assignment.AssignmentApplication` to start the application.
 
 == Resource
 
