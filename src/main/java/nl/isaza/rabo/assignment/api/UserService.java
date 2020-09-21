@@ -42,6 +42,7 @@ public class UserService {
 
     /**
      * Placeholder until client available.
+     *
      * @param first   the first name of the user
      * @param surname the surname (last) name of hte user
      * @return the {@link User} of the found user
