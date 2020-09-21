@@ -24,9 +24,11 @@ class UserControllerTest {
 
     @Test
     public void testGetUser() {
-        api.get().uri(USER_PATH)
+        api.get().uri(USER_PATH + "?first=" + FIRSTNAME + "&surname=" + SURNAME)
                 .exchange()
-                .expectStatus().isOk();
-
+                .expectStatus().isOk()
+                .expectBody()
+                .jsonPath("first").isEqualTo(FIRSTNAME)
+                .jsonPath("surname").isEqualTo(SURNAME);
     }
 }
