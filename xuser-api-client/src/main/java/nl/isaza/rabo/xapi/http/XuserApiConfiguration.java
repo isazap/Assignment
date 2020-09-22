@@ -9,6 +9,6 @@ import org.springframework.context.annotation.Configuration;
 @Setter
 @Configuration
 @ConfigurationProperties(prefix = "xuser")
-public class XUserApiConfiguration {
+public class XuserApiConfiguration {
     private String baseUrl;
 }
