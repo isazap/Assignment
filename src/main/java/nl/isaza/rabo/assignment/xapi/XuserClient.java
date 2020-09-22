@@ -7,8 +7,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 
@@ -21,7 +19,6 @@ import java.util.Map;
  */
 @Service
 public class XuserClient {
-    private static final Logger LOGGER = LoggerFactory.getLogger(XuserClient.class);
     private final ObjectMapper mapper;
     private final OkHttpClient client;
     private final XuserApiConfiguration configuration;
@@ -33,7 +30,7 @@ public class XuserClient {
     }
 
     /**
-     *  Executes the given request and parses the result to the given result class.
+     * Executes the given request and parses the result to the given result class.
      *
      * @param requestBuilder the request builder to execute
      * @param result         the result class to parse the body to
@@ -55,22 +52,22 @@ public class XuserClient {
     /**
      * Returns a {@link Request.Builder} for the configuration baseUrl and path.
      *
-     * @param path the endpoint path
+     * @param path   the endpoint path
      * @param params the query parameters for the request
      * @return a configured request builder
      */
-    Request.Builder request(String path, Map<String,String> params) {
+    Request.Builder request(String path, Map<String, String> params) {
         var url = HttpUrl.get(configuration.getBaseUrl()).resolve(path);
         if (url == null) {
             throw new IllegalStateException(String.format(
-                    "Could not combine connection baseUrl %s and the given path %",
+                    "Could not combine connection baseUrl %s and the given path %s",
                     configuration.getBaseUrl(),
                     path
             ));
         }
 
         HttpUrl.Builder httpBuilder = url.newBuilder();
-        params.entrySet().stream().forEach(e -> httpBuilder.addQueryParameter(e.getKey(), e.getValue());
+        params.entrySet().forEach(e -> httpBuilder.addQueryParameter(e.getKey(), e.getValue()));
 
         return new Request.Builder().url(httpBuilder.build());
     }
