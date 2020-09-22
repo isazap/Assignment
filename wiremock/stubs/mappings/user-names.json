@@ -1,0 +1,30 @@
+{
+   "request":{
+      "method":"GET",
+      "urlPath":"/users/names"
+   },
+   "response":{
+      "status":200,
+      "jsonBody":[
+         {
+            "first": "Ashton",
+            "last": "Lewis"
+         },
+         {
+            "first": "Barb",
+            "last": "Henderson"
+         },
+         {
+            "first": "Bettina",
+            "last": "Davidson"
+         },
+         {
+            "first": "Hugo",
+            "last": "Lucas"
+         }
+      ],
+      "headers":{
+         "Content-Type":"application/json"
+      }
+   }
+}
