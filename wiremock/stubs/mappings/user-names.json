@@ -7,18 +7,22 @@
       "status":200,
       "jsonBody":[
          {
+            "title":"Mr",
             "first": "Ashton",
             "last": "Lewis"
          },
          {
+            "title":"Ms",
             "first": "Barb",
             "last": "Henderson"
          },
          {
+            "title":"Mademoiselle",
             "first": "Bettina",
             "last": "Davidson"
          },
          {
+            "title":"Mr",
             "first": "Hugo",
             "last": "Lucas"
          }

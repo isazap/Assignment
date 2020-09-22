@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 @Getter
 public class UserDto {
+    private final String title;
     private final String first;
     private final String surname;
     private final Gender gender;
@@ -17,11 +18,13 @@ public class UserDto {
 
     @JsonCreator
     public UserDto(
+            String title,
             String first,
             String surname,
             Gender gender,
             LocalDate dob,
             String picture) {
+        this.title = title;
         this.first = first;
         this.surname = surname;
         this.gender = gender;
@@ -30,7 +33,8 @@ public class UserDto {
     }
 
     public UserDto(User user) {
-        this(user.getName().getFirst(),
+        this(user.getName().getTitle(),
+                user.getName().getFirst(),
                 user.getName().getSurname(),
                 user.getGender(),
                 user.getDob().getDate(),
