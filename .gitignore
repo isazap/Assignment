@@ -1,6 +1,5 @@
 HELP.md
 target/
-.mvn/wrapper/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
@@ -33,6 +32,7 @@ build/
 .vscode/
 /mvnw
 /mvnw.cmd
+/.mvn/
 /.mvn/
 /.mvn/
 /.mvn/
