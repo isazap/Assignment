@@ -1,4 +1,4 @@
-package nl.isaza.rabo.xapi.http;
+package nl.isaza.rabo.assignment.xapi;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -14,6 +14,7 @@ import org.springframework.util.StreamUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Map;
 
 /**
  * Service responsible for HTTP communication with the WireMock standalone service for user data.
@@ -55,9 +56,10 @@ public class XuserClient {
      * Returns a {@link Request.Builder} for the configuration baseUrl and path.
      *
      * @param path the endpoint path
+     * @param params the query parameters for the request
      * @return a configured request builder
      */
-    Request.Builder request(String path) {
+    Request.Builder request(String path, Map<String,String> params) {
         var url = HttpUrl.get(configuration.getBaseUrl()).resolve(path);
         if (url == null) {
             throw new IllegalStateException(String.format(
@@ -66,7 +68,11 @@ public class XuserClient {
                     path
             ));
         }
-        return new Request.Builder().url(url);
+
+        HttpUrl.Builder httpBuilder = url.newBuilder();
+        params.entrySet().stream().forEach(e -> httpBuilder.addQueryParameter(e.getKey(), e.getValue());
+
+        return new Request.Builder().url(httpBuilder.build());
     }
 
     /**

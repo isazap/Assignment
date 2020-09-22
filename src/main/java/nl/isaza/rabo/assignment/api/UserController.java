@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/users")
 public class UserController {
@@ -20,4 +22,10 @@ public class UserController {
         User user = userService.findUser(first, surname);
         return new UserDto(user);
     }
+
+    /*@GetMapping
+    public List<NameDto> listUserNames() {
+        var userNameList = userService.getUserNames();
+        userNameList.stream.
+    }*/
 }

@@ -1,4 +1,4 @@
-package nl.isaza.rabo.xapi.http;
+package nl.isaza.rabo.assignment.xapi;
 
 import lombok.Getter;
 import lombok.Setter;
