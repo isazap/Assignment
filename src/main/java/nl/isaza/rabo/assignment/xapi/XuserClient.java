@@ -7,6 +7,7 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StreamUtils;
 
@@ -17,16 +18,17 @@ import java.util.Map;
 /**
  * Service responsible for HTTP communication with the WireMock standalone service for user data.
  */
+
 @Service
 public class XuserClient {
+    private final XuserConfiguration xuserConfiguration;
     private final ObjectMapper mapper;
     private final OkHttpClient client;
-    private final XuserApiConfiguration configuration;
 
-    public XuserClient(ObjectMapper mapper, OkHttpClient client, XuserApiConfiguration configuration) {
+    public XuserClient(XuserConfiguration xuserConfiguration, ObjectMapper mapper, OkHttpClient client) {
+        this.xuserConfiguration = xuserConfiguration;
         this.mapper = mapper;
         this.client = client;
-        this.configuration = configuration;
     }
 
     /**
@@ -57,11 +59,12 @@ public class XuserClient {
      * @return a configured request builder
      */
     Request.Builder request(String path, Map<String, String> params) {
-        var url = HttpUrl.get(configuration.getBaseUrl()).resolve(path);
+        var baseUrl = "http://localhost:8000";
+        var url = HttpUrl.get(baseUrl).resolve(path);
         if (url == null) {
             throw new IllegalStateException(String.format(
                     "Could not combine connection baseUrl %s and the given path %s",
-                    configuration.getBaseUrl(),
+                    baseUrl,
                     path
             ));
         }
